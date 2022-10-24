@@ -7,5 +7,5 @@ Build magma library
 
 build magma charts:
 ```bash
-./generate_helm_repo.sh lib
+./generate_helm_repo.sh
 ```
