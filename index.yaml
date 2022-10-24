@@ -1,5 +1,122 @@
 apiVersion: v1
 entries:
+  cwf-orc8r:
+  - apiVersion: v2
+    appVersion: 1.8.0
+    created: "2022-10-24T05:56:18.640712968Z"
+    dependencies:
+    - name: orc8rlib
+      repository: https://shubhamtatvamasi.github.io/magma-charts-10-24-2022
+      version: 0.1.4
+    description: A Helm chart for magma orchestrator's cwf module
+    digest: 5a367a37e7f3516590902f6bd6f8c580e642798ecd3dff1fe307275c6fd6084d
+    keywords:
+    - magma
+    - or8cr
+    - cwf-orc8r
+    name: cwf-orc8r
+    sources:
+    - https://github.com/magma/magma
+    urls:
+    - https://github.com/ShubhamTatvamasi/magma-charts-10-24-2022/releases/download/cwf-orc8r-1.8.0/cwf-orc8r-1.8.0.tgz
+    version: 1.8.0
+  domain-proxy:
+  - apiVersion: v2
+    appVersion: 1.8.0
+    created: "2022-10-24T05:56:18.795773166Z"
+    description: A Helm chart for magma orchestrator's domain-proxy module.
+    digest: ba15ea56d36fcc09fb156d3c414b8f52841343ab6d916a93219c9f483465b791
+    keywords:
+    - magma
+    - orc8r
+    - dp
+    name: domain-proxy
+    sources:
+    - https://github.com/magma/magma
+    type: application
+    urls:
+    - https://github.com/ShubhamTatvamasi/magma-charts-10-24-2022/releases/download/domain-proxy-1.8.0/domain-proxy-1.8.0.tgz
+    version: 1.8.0
+  feg-orc8r:
+  - apiVersion: v2
+    appVersion: 1.8.0
+    created: "2022-10-24T05:56:18.952874674Z"
+    dependencies:
+    - name: orc8rlib
+      repository: https://shubhamtatvamasi.github.io/magma-charts-10-24-2022
+      version: 0.1.4
+    description: A Helm chart for magma orchestrator's feg module
+    digest: bf276e972c720b149aae6dc2e14e53547f2b49fba12f3c69e706374e22bbd1ac
+    keywords:
+    - magma
+    - or8cr
+    - feg-orc8r
+    name: feg-orc8r
+    sources:
+    - https://github.com/magma/magma
+    urls:
+    - https://github.com/ShubhamTatvamasi/magma-charts-10-24-2022/releases/download/feg-orc8r-1.8.0/feg-orc8r-1.8.0.tgz
+    version: 1.8.0
+  lte-orc8r:
+  - apiVersion: v2
+    appVersion: 1.8.0
+    created: "2022-10-24T05:56:19.109781182Z"
+    dependencies:
+    - name: orc8rlib
+      repository: https://shubhamtatvamasi.github.io/magma-charts-10-24-2022
+      version: 0.1.4
+    description: A Helm chart for magma orchestrator's lte module
+    digest: 07508b066c5fc755f388bd82915e2f158084184367089e27a427f218a438d23c
+    keywords:
+    - magma
+    - or8cr
+    - lte-orc8r
+    name: lte-orc8r
+    sources:
+    - https://github.com/magma/magma
+    urls:
+    - https://github.com/ShubhamTatvamasi/magma-charts-10-24-2022/releases/download/lte-orc8r-1.8.0/lte-orc8r-1.8.0.tgz
+    version: 1.8.0
+  orc8r:
+  - apiVersion: v2
+    appVersion: 1.8.0
+    created: "2022-10-24T05:56:19.304270283Z"
+    dependencies:
+    - condition: certs.create
+      name: certs
+      repository: ""
+      version: 0.1.0
+    - condition: secrets.create
+      name: secrets
+      repository: ""
+      version: 0.1.10
+    - condition: metrics.enabled
+      name: metrics
+      repository: ""
+      version: 1.4.24
+    - condition: nms.enabled
+      name: nms
+      repository: ""
+      version: 0.1.12
+    - condition: logging.enabled
+      name: logging
+      repository: ""
+      version: 0.1.10
+    - name: orc8rlib
+      repository: https://shubhamtatvamasi.github.io/magma-charts-10-24-2022
+      version: 0.1.4
+    description: Helm chart for the Magma Orchestrator
+    digest: 0f41eae89433f0825110c21247bbb30e6a459305932be638d94e47c76409eb8f
+    home: https://www.magmacore.org
+    keywords:
+    - magma
+    - orc8r
+    name: orc8r
+    sources:
+    - https://github.com/magma/magma
+    urls:
+    - https://github.com/ShubhamTatvamasi/magma-charts-10-24-2022/releases/download/orc8r-1.8.0/orc8r-1.8.0.tgz
+    version: 1.8.0
   orc8rlib:
   - apiVersion: v2
     appVersion: 1.0.0
@@ -16,4 +133,20 @@ entries:
     urls:
     - https://github.com/ShubhamTatvamasi/magma-charts-10-24-2022/releases/download/orc8rlib-0.1.4/orc8rlib-0.1.4.tgz
     version: 0.1.4
-generated: "2022-10-24T05:54:39.343177879Z"
+  secrets:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2022-10-24T05:56:19.507654829Z"
+    description: A Helm chart to create magma orchestrator secrets
+    digest: af90bcb5ed63ef70653ad6f602ec50f1b36a8555dca84ced644928e4fe1d59e8
+    keywords:
+    - magma
+    - orc8r
+    - secrets
+    name: secrets
+    sources:
+    - https://github.com/magma/magma
+    urls:
+    - https://github.com/ShubhamTatvamasi/magma-charts-10-24-2022/releases/download/secrets-0.1.10/secrets-0.1.10.tgz
+    version: 0.1.10
+generated: "2022-10-24T05:56:19.507659729Z"
